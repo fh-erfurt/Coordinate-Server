@@ -1,18 +1,17 @@
-//
-// Translated by CS2J (http://www.cs2j.com): 12.01.2020 17:00:41
-//
+package Compositepattern.Interfaces.Leafs;
 
-package CompositePattern.Interfaces.Leafs;
-
+import Compositepattern.Interfaces.*;
 
 /**
-* Indicates a leaf storing a new different composite.
-*/
-public interface ILeafComposite   
+ Indicates a leaf storing a new different composite.
+ */
+public interface ILeafComposite
 {
 }
 
-
 /**
-* Represents a leaf storing a new different composite.
-*/
+ Represents a leaf storing a new different composite.
+ */
+public interface ILeafComposite<TComposite extends IComposite<TComposite>> extends ILeaf<TComposite>, ILeafComposite
+{
+}
