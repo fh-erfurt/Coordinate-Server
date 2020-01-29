@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59f9726a-4bc3-4256-88f3-30f29e22f1cf" name="Default Changelist" comment="" />
+    <list default="true" id="8f7b97d5-c0f2-48fe-9a96-da55e0c4449c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,12 +11,13 @@
     <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1WnVg1mkBKwxEOEqXm5ddjr7c3o" />
+  <component name="ProjectId" id="1WJKXbwranAqshEtgTKxPjfEDLq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,7 +25,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/JavaProjekt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -43,22 +44,22 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="59f9726a-4bc3-4256-88f3-30f29e22f1cf" name="Default Changelist" comment="" />
-      <created>1579785453311</created>
+      <changelist id="8f7b97d5-c0f2-48fe-9a96-da55e0c4449c" name="Default Changelist" comment="" />
+      <created>1578862297421</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1579785453311</updated>
+      <updated>1578862297421</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1579785505787">
+    <state x="811" y="411" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580314026350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579785505787" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1579785461212">
+    <state x="811" y="411" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580314026350" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580323484486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579785461212" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580323484486" />
   </component>
 </project>

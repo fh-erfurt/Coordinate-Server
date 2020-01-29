@@ -12,6 +12,8 @@ public interface ILeafComposite
 /**
  Represents a leaf storing a new different composite.
  */
-public interface ILeafComposite<TComposite extends IComposite<TComposite>> extends ILeaf<TComposite>, ILeafComposite
+public interface ILeafComposite<TComposite extends IComposite<TComposite>>
+        extends ILeaf<TComposite>
+        extends ILeafComposite
 {
 }

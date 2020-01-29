@@ -19,10 +19,9 @@ public interface IComponent
     String getType();
 }
 
-/**
-<inheritdoc/>
- */
-public interface IComponent<TComposite extends IComposite<TComposite>> extends IComponent, Closeable
+public interface IComponent<TComposite extends IComposite<TComposite>>
+        extends IComponent
+        extends Closeable
 {
     /**
      Name of the component.
@@ -38,15 +37,13 @@ public interface IComponent<TComposite extends IComposite<TComposite>> extends I
      <item><see cref="Parent"/></item>
      </list>
      */
-    //C# TO JAVA CONVERTER TODO TASK: The following line could not be converted:
 	//IObservable<(string change, IComponent<TComposite> component)> ComponentChanged { get; }
-
 
     /**
      Get the parent of this composite on layer above in the tree.
      <p>When changed <see cref="ComponentChanged"/>.OnNext() is called.</p>
      */
-    TComposite getParent() {get;}
+    TComposite getParent();
 
     /**
      Get the root of the tree the component is in.
