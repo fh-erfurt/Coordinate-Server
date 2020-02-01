@@ -57,9 +57,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="811" y="411" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580314026350" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580323484486">
+    <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580560686775">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580560686775" />
+    <state x="342" y="146" key="new project wizard" timestamp="1580563120391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580323484486" />
+    <state x="342" y="146" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580563120391" />
   </component>
 </project>

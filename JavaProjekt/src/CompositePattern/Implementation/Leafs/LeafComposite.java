@@ -9,33 +9,16 @@ public class LeafComposite <TComposite extends IComposite<TComposite>>
         extends Leaf<TComposite>
         extends ILeafComposite<TComposite>
 {
-    public LeafComposite(String name)
-    {
-        this(name, null);
-    }
-
-    public LeafComposite(UUID uuid)
-    {
-        this(null, uuid);
-    }
-
-    public LeafComposite()
-    {
-        this(null, null);
-    }
-/**
- * Generate a new leafComposite type.
- *
- *  @param name Name of the component, default is
- *  {@link #Type}
- * />
- *  @param guid The UUID for the component, default is a new UUID.
- */
-    public LeafComposite(String name, UUID uuid)
-    {
-        super(name, uuid);
-    }
-
+    /**
+     * Generate a new leafComposite type.
+     *
+     *  @param name Name of the component, default is
+     *  {@link #Type}
+     *
+     *  @param guid The UUID for the component, default is a new UUID.
+     */
+    public LeafComposite(String name, UUID uuid)    { super(name, uuid); }
+    public LeafComposite()                          { this(null, null); }
+    public LeafComposite(String name)               { this(name, null); }
+    public LeafComposite(UUID uuid)                 { this(null, uuid); }
 }
-
-
