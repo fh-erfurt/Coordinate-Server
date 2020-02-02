@@ -22,14 +22,14 @@ public interface IComposite<TComposite extends IComposite<TComposite>>
      <item><c>MoveTo()</c></item>
      </list>
      */
-	IObservable<(string operation, TComposite source, IComponent<TComposite> component, TComposite target)> ChildChanged { get; }
+	IObservable<(string operation, TComposite source, IComponent<TComposite> component, TComposite target)> getChildChanged();      //TODO: Implementing the Observable Pattern!!!
 
     /**
      Execute the <paramref name="action"/> on the storage threat save with a look.
      @param action Action delegate to execute.
      @exception ArgumentNullException
      */
-    void ExecuteThreadSave(Action action);
+    void ExecuteThreadSave(Action action);                                                                                          //TODO: Implementing the Action Pattern!!!
 
     /**
      Execute the <paramref name="function"/> on the storage threat save with a look.
@@ -38,7 +38,7 @@ public interface IComposite<TComposite extends IComposite<TComposite>>
      @return The result of <paramref name="function"/> in type <typeparamref name="T"/>.
      @exception ArgumentNullException
      */
-    T this.<T>ExecuteThreadSave(Func<T> function);
+    T this.<T>ExecuteThreadSave(Func<T> function);                                                                                  //TODO: Implementing the Funktion Pattern!!!
 
     /**
      Select alls components in this and asubsequent composites.

@@ -31,13 +31,13 @@ public interface IComponent<TComposite extends IComposite<TComposite>>
     void setName(String value);
 
     /**
-     Observer for changes in the component.
-     <list type="bullet">
-     <item><see cref="Name"/></item>
-     <item><see cref="Parent"/></item>
-     </list>
+     *Observer for changes in the component.
+     *<list type="bullet">
+     *<item><see cref="Name"/></item>
+     *<item><see cref="Parent"/></item>
+     *</list>
      */
-	//IObservable<(string change, IComponent<TComposite> component)> ComponentChanged { get; }
+	IObservable<(string change, IComponent<TComposite> component)> getComponentChanged();                                           //TODO: Implementing the Observable Pattern!!!
 
     /**
      Get the parent of this composite on layer above in the tree.

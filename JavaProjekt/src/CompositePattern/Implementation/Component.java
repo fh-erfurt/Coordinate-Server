@@ -55,7 +55,7 @@ public abstract class Component<TComposite extends IComposite<TComposite>>
         = new Subject<(String, IComponent<TComposite>)>();
 
 
-	public IObservable<(String change, IComponent<TComposite> component)> ComponentChanged
+	public IObservable<(String change, IComponent<TComposite> component)> getComponentChanged
     {
         ComponentChangedSubject.AsObservable();
     }
@@ -68,13 +68,13 @@ public abstract class Component<TComposite extends IComposite<TComposite>>
     }
 
     public TComposite getParent()   { return parent; }
-    public void setParent(TComposite value)
+    protected void setParent(TComposite value)
     {
         parent = value;
         ComponentChangedSubject.OnNext(("Parent", this));
     }
 
-    public final TComposite GetRootComposite()
+    public TComposite GetRootComposite()
     {
         return (getParent() == null)
         ? (TComposite)(IComponent<TComposite>)this
@@ -113,25 +113,15 @@ public abstract class Component<TComposite extends IComposite<TComposite>>
         if (!(componentToMove.IsManaged()))
         { throw new IllegalStateException("Cannot move a unmanged component."); }
 
-        if ((componentToMove instanceof IComposite<TComposite>
-            ? (IComposite<TComposite>)componentToMove
-            : null)
-                == null
-                ? null
-                : ((componentToMove
-                    instanceof IComposite<TComposite>
-                    ? (IComposite<TComposite>)componentToMove
-                    : null).IsRoot())
-                        != null
-                        ? (componentToMove
-                            instanceof IComposite<TComposite>
-                            ? (IComposite<TComposite>)componentToMove
-                            : null).IsRoot()
-                        : false)
-        { throw new IllegalStateException("Cannot move the root composite."); }
-
         if (targetComposite.equals(componentToMove))
         { throw new IllegalStateException("A composite cannot be added to itself as a child."); }
+
+        if ((componentToMove instanceof IComposite<TComposite> ? (IComposite<TComposite>)componentToMove : null)
+            == null ? null : ((componentToMove instanceof IComposite<TComposite> ? (IComposite<TComposite>)componentToMove : null).IsRoot())
+            != null ? (componentToMove instanceof IComposite<TComposite> ? (IComposite<TComposite>)componentToMove : null).IsRoot() : false)
+        { throw new IllegalStateException("Cannot move the root composite."); }
+
+
 
         // if component is composite
         // move not bounded components to its parent representing this as parent
@@ -139,19 +129,19 @@ public abstract class Component<TComposite extends IComposite<TComposite>>
         TComposite compositeToMove = tempVar ? (TComposite)componentToMove : null;
         if (tempVar)
         {
-            compositeToMove.ExecuteThreadSave(
-                () -> compositeToMove
+            compositeToMove.ExecuteThreadSave(() ->
+                compositeToMove
                     .SelectNotBoundetComponents()
                     .ToList()
-                    .ForEach(
-                        boundetComponent-> SwapParants(boundetComponent, boundetComponent.Parent, oldParentComposite)));
+                    .ForEach(boundetComponent
+                        -> SwapParents(boundetComponent, boundetComponent.Parent, oldParentComposite)));
         }
 
         // swap parents
-        SwapParants(componentToMove, oldParentComposite, targetComposite);
+        SwapParents(componentToMove, oldParentComposite, targetComposite);
     }
 
-    private void SwapParants(IComponent<TComposite> component, TComposite fromComposite, TComposite toComposite)
+    private void SwapParents(IComponent<TComposite> component, TComposite fromComposite, TComposite toComposite)
     {
 	    fromComposite.Remove(component);
 	    toComposite.Add(component);
@@ -159,21 +149,9 @@ public abstract class Component<TComposite extends IComposite<TComposite>>
 
     public boolean IsManaged()
     {
-        return getParent() != null || ((this instanceof IComposite<TComposite>
-        ? (IComposite<TComposite>)this
-        : null)
-            == null
-            ? null
-            : ((this
-                instanceof IComposite<TComposite>
-                ? (IComposite<TComposite>)this
-                : null).IsRoot())
-                    != null
-                    ? (this
-                        instanceof IComposite<TComposite>
-                        ? (IComposite<TComposite>)this
-                        : null).IsRoot()
-                    : false);
+        return getParent() != null || ((this instanceof IComposite<TComposite> ? (IComposite<TComposite>)this : null)
+            == null ? null : ((this instanceof IComposite<TComposite> ? (IComposite<TComposite>)this : null).IsRoot())
+            != null ? (this instanceof IComposite<TComposite> ? (IComposite<TComposite>)this : null).IsRoot() : false);
     }
 
     @Override
